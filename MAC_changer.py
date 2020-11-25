@@ -13,12 +13,3 @@ subprocess.call(["ifconfig",interface,"hw","ether",new_mac])
 #ifconfig eth0 up
 subprocess.call(["ifconfig",interface,"up"])
 
-#output
-output = str(subprocess.check_output(["ifconfig",interface]))
-
-#r to make readable
-changed_mac = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w",output)
-
-#check
-if new_mac == changed_mac.group(0):
-  print("MAC Address changed Succesfully..!!!")
