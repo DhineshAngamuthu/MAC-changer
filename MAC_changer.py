@@ -20,4 +20,5 @@ output = str(subprocess.check_output(["ifconfig",interface]))
 changed_mac = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w",output)
 
 #check
-if new_mac = changed_mac.group(0):print("MAC Address changed Succesfully..!!!")
+if new_mac == changed_mac.group(0):
+  print("MAC Address changed Succesfully..!!!")
