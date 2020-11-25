@@ -22,7 +22,7 @@ There are many other tasks like becoming anonymous in a network and to avoid som
 # FAQ
 I can see that you are trying the set the Mac address to 11:22:33:44:55:66. And that's the problem. You can only set unicast address and unicast address has to have the first octet as an even value. Try changing the value of the first octet to even (ex: 12:22:33:44:55:66) and it should work.
 
-# TO SET MAC ADDRESS TO DEFAU
+# TO SET MAC ADDRESS TO DEFAULT
 
 sudo ethtool -P eth0  
 
